@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }} - Product Details</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ product.name }}</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart/">Cart</a></li>
+                <li><a href="/login/">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="product-detail">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            <div class="details">
+                <h2>${{ product.price }}</h2>
+                <p>{{ product.description }}</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 E-commerce Store</p>
+    </footer>
+</body>
+</html>
